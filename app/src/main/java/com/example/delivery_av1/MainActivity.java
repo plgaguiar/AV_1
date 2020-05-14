@@ -7,6 +7,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -39,7 +40,8 @@ public class MainActivity extends AppCompatActivity {
 
         dao = new PedidoDAO(this);
 
-        mdb = new Conexao(this, "Delivery", null, 1);
+        mdb = new Conexao(this, "Delivery.db" +
+                "", null, 1);
 
 //        TxValor = (EditText) findViewById(R.id.TxValor);
 //        TxQuant = (EditText) findViewById(R.id.TxQuant);
@@ -106,25 +108,25 @@ public class MainActivity extends AppCompatActivity {
     public void solicitarPedido(View view) {
     //public void solicitarPedido(View v) {
 
-        Pedido a = new Pedido();
-        a.setProduto(produto.getText().toString());
-        a.setAcomp1(acomp1.getText().toString());
-        a.setQuantidade(quantidade.getText().toString());
-        a.setValor(valor.getText().toString());
-        a.setObs(obs.getText().toString());
-        a.setTotal(total.getText().toString());
-        long id = dao.inserir(a);
+//        Pedido a = new Pedido();
+//        a.setProduto(produto.getText().toString());
+//        a.setAcomp1(acomp1.getText().toString());
+//        a.setQuantidade(quantidade.getText().toString());
+//        a.setValor(valor.getText().toString());
+//        a.setObs(obs.getText().toString());
+//        a.setTotal(total.getText().toString());
+//        long id = dao.inserir(a);
 
 
-//        String nomeProduto = ((EditText) findViewById(R.id.TxProduto)).getText().toString();
-//        String nomeAcomp1 = ((EditText) findViewById(R.id.TxAcomp1)).getText().toString();
-//        String nomeTxValor = ((EditText) findViewById(R.id.TxValor)).getText().toString();
-//        String nomeTxQuant = ((EditText) findViewById(R.id.TxQuant)).getText().toString();
-//        String nomeTxTotal = ((EditText) findViewById(R.id.TxTotal)).getText().toString();
-//        String nomeObs = ((EditText) findViewById(R.id.TxObs)).getText().toString();
-//        mdb.solicitarPedido(nomeProduto, nomeAcomp1, nomeTxValor, nomeTxQuant, nomeTxTotal, nomeObs);
-//        exibirPedido();
-//        Toast.makeText(this, "Pedido inserido "+id, Toast.LENGTH_LONG).show();
+        String nomeProduto = ((EditText) findViewById(R.id.TxProduto)).getText().toString();
+        String nomeAcomp1 = ((EditText) findViewById(R.id.TxAcomp1)).getText().toString();
+        String nomeTxValor = ((EditText) findViewById(R.id.TxValor)).getText().toString();
+        String nomeTxQuant = ((EditText) findViewById(R.id.TxQuant)).getText().toString();
+        String nomeTxTotal = ((EditText) findViewById(R.id.TxTotal)).getText().toString();
+        String nomeObs = ((EditText) findViewById(R.id.TxObs)).getText().toString();
+        mdb.solicitarPedido(nomeProduto, nomeAcomp1, nomeTxValor, nomeTxQuant, nomeTxTotal, nomeObs);
+        exibirPedido();
+        Toast.makeText(this, "Pedido inserido ", Toast.LENGTH_LONG).show();
     }
 
 
