@@ -1,0 +1,2 @@
+rootProject.name='Delivery_AV1'
+include ':app'

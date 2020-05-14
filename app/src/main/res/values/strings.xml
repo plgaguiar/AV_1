@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Delivery_AV1</string>
+    <string-array name="products">
+        <item>Escolha o produto</item>
+        <item>Baurú - </item>
+        <item>X Tudão - </item>
+        <item>X Egg Bacon - </item>
+        <item>X Tudo Filé - </item>
+        <item>Vitamina - </item>
+        <item>X Tudo Frango - </item>
+    </string-array>
+    <string-array name="valor">
+        <item>0</item>
+        <item>6.91</item>
+        <item>6.54</item>
+        <item>15.00</item>
+        <item>9.56</item>
+        <item>10.55</item>
+        <item>13.99</item>
+    </string-array>
+    <item name="TxProduto" type="id" />
+</resources>
